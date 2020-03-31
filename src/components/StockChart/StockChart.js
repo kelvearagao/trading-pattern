@@ -20,36 +20,9 @@ class CandleStickChart extends React.Component {
     }
 
 	render() {
-        const { type, width, ratio } = this.props;
+        const { type, width, data, ratio } = this.props;
 
-        const data = [
-            {
-                date: new Date('2020-01-10T02:01Z'),
-                open: 10,
-                high: 11,
-                low: 4,
-                close: 7,
-                volume: 103334
-            },
-            {
-                date: new Date('2020-01-10T02:02Z'),
-                open: 4,
-                high: 9,
-                low: 1,
-                close: 5,
-                volume: 103334
-            },
-            {
-                date: new Date('2020-01-10T02:03Z'),
-                open: 2,
-                high: 15,
-                low: 0,
-                close: 13,
-                volume: 103334
-            }
-        ]
-
-        data["columns"] = ["date", "open", "high", "low", "close", "volume"]
+        data["columns"] = ["date", "open", "high", "low", "close"]
 
 
         const xAccessor = d => d.date;
@@ -83,7 +56,7 @@ class CandleStickChart extends React.Component {
                     {...chartProps}
                     height={400}
                     ratio={ratio}
-                    width={width}
+                    width={width - 24}
                     margin={{ left: 32, right: 32, top: 24, bottom: 24 }}
                     type={type}
                     seriesName="MSFT_1"
@@ -125,16 +98,14 @@ class CandleStickChart extends React.Component {
 
 CandleStickChart = fitWidth(CandleStickChart);
 
-export default () => {
-    const [data, setData] = useState([])
+export default ({ data }) => {
+    //const [data, setData] = useState([])
 
     useEffect(() => {
-        getData().then(data => {
-            setData(data)
-        })
+        // getData().then(data => {
+        //     setData(data)
+        // })
     }, [])
-
-    //console.log(data)
 
     return <div>
         { data.length > 0 && (
