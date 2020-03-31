@@ -22,3 +22,8 @@ export function getData() {
 		.then(data => tsvParse(data, parseData(parseDate)))
 	return promiseMSFT;
 }
+
+export const chartProps = {
+	panEvent: false, // clicar e arrastar
+	zoomEvent: false
+}
