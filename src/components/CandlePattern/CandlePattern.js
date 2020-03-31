@@ -9,7 +9,7 @@ export default () => {
 
     const handleTrendClick = (trend) => () => {
         if (trend === pattern.trend) {
-            alert('Acertou!')
+            alert('Acertou!!!')
 
             setPattern(patterns[Math.floor(Math.random() * patterns.length)])
         } else {
