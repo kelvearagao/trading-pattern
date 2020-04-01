@@ -45,11 +45,11 @@ class CandleStickChart extends React.Component {
 		return (
             <div 
                 style={{ 
-                width: width - 24,
+                width: width,
                 margin: '0 auto',
                 // borderBottom: '1px solid white'
                 borderRadius: '3px',
-                backgroundColor: 'rgb(35, 66, 90, 0.3)'
+                // backgroundColor: 'rgb(35, 66, 90, 0.3)'
                 // border: '1px solid black'
             }}>
                 <ChartCanvas 
