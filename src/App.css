@@ -2,7 +2,7 @@
   text-align: center;
   --background-color: #0c304c;
   --background-color: #04233c;
-  background-image: linear-gradient(to bottom, #174a73, #052946, #04233c);
+  --background-image: linear-gradient(to bottom, #174a73, #052946, #04233c);
   overflow-y: hidden;
   overflow-x: hidden;
 }
