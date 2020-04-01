@@ -56,7 +56,7 @@ class CandleStickChart extends React.Component {
                     {...chartProps}
                     height={400}
                     ratio={ratio}
-                    width={width - 24}
+                    width={width}
                     margin={{ left: 32, right: 32, top: 24, bottom: 24 }}
                     type={type}
                     seriesName="MSFT_1"
