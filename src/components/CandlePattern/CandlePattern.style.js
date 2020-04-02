@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-wrap: nowrap;
+    --border: 1px solid yellow;
 
     header {
+        --border: 1px solid red;
         padding: 12px;
         display: flex;
         justify-content: space-between;
@@ -33,15 +37,16 @@ export const Wrapper = styled.div`
 
 export const ButtonsWrapper = styled.div`
     display: flex;
-    justify-content: space-around;
     padding: 12px;
-    --background-color: #04233c;
+    width: 100%;
+    max-width: 500px;
+    align-self: center;
     --border: 1px solid yellow;
 
     button {
         border-radius: 0;
-        padding: 24px;
-        width: 100%;
+        padding: 24px 12px 24px 12px;
+        width: 50%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -57,7 +62,11 @@ export const ButtonsWrapper = styled.div`
         }
 
         :first-child {
-            margin-right: 12px;
+            margin-right: 6px;
+        }
+
+        :last-child {
+            margin-left: 6px;
         }
     }
 `

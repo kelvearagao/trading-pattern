@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import StockChart from 'components/StockChart'
 import Button from 'react-bootstrap/Button'
 import { Wrapper, ButtonsWrapper } from './CandlePattern.style'
@@ -9,6 +9,7 @@ import { patterns } from './candles';
 
 export default () => {
     const [pattern, setPattern] = useState(patterns[Math.floor(Math.random() * patterns.length)])
+    // const [pattern, setPattern] = useState(patterns[2])
 
     const handleTrendClick = (trend) => () => {
         if (trend === pattern.trend) {
@@ -20,7 +21,9 @@ export default () => {
         }
     }
 
-    return <Wrapper style={{ height: window.innerHeight}}>
+    return <Wrapper 
+        // style={{ height: window.innerHeight}}
+        >
         <header>
             <MenuIcon />
             <h1>Qual a tendência?</h1>

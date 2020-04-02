@@ -54,7 +54,7 @@ class CandleStickChart extends React.Component {
             }}>
                 <ChartCanvas 
                     {...chartProps}
-                    height={400}
+                    height={width}
                     ratio={ratio}
                     width={width}
                     margin={{ left: 32, right: 32, top: 24, bottom: 24 }}
@@ -84,9 +84,10 @@ class CandleStickChart extends React.Component {
                         /> */}
                         
                         <CandlestickSeries
-                            stroke={d => d.close > d.open ? "#6BA583" : "#DB0000"}
-                            wickStroke={d => d.close > d.open ? "#6BA583" : "#DB0000"}
-                            fill={d => d.close > d.open ? "#6BA583" : "#DB0000"} 
+                            opacity={1}
+                            stroke={d => d.close > d.open ? "#28a745" : "#dc3545"}
+                            wickStroke={d => d.close > d.open ? "#28a745" : "#dc3545"}
+                            fill={d => d.close > d.open ? "#28a745" : "#dc3545"} 
                             width={timeIntervalBarWidth(utcMinute)}
                         />
                     </Chart>
@@ -109,7 +110,7 @@ export default ({ data }) => {
 
     return <div>
         { data.length > 0 && (
-            <CandleStickChart data={data} width={window.innerWidth > 400 ? 400 : window.innerWidth} />
+            <CandleStickChart data={data} width={window.innerWidth > 400 ? 400 : 250} />
         )}
     </div>
 }
